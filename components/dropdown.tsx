@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const Dropdown = () => {
   return (
     <select className="appearance-none border-none outline-none bg-transparent text-blue-500">
@@ -13,14 +11,21 @@ const Dropdown = () => {
 
 export default Dropdown;
 /* 
-<select className="appearance-none border-none outline-none bg-transparent text-blue-500">
-  <option className="text-center" value="o">o</option>
-  <option className="text-center" value="A">A</option>
-  <option className="text-center" value="B">B</option>
-  <option className="text-center" value="C">C</option>
-</select>
+const Dropdown = () => {
+  return (
+    <select className="appearance-none border-none outline-none bg-transparent text-blue-500">
+      <option className="hidden text-center" value="o">o</option>
+      <option className="text-center" value="A">A</option>
+      <option className="text-center" value="B">B</option>
+      <option className="text-center" value="C">C</option>
+    </select>
+  );
+}
 */
 /*
+import { useState } from "react";
+
+const Dropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -54,4 +59,5 @@ export default Dropdown;
       )}
     </div>
   );
+}
 */

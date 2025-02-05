@@ -127,7 +127,7 @@ export default function VehicleSupportForm() {
                     className="appearance-none forced-colors:appearance-auto"
                     type="radio"
                     name="themes"
-                    onChange={(e) => setServere(true)}
+                    onChange={() => setServere(true)}
                   />
                   <FontAwesomeIcon icon={faBicycle} className="fas fa-1x text-red-500"></FontAwesomeIcon>
                   <FontAwesomeIcon icon={faCheckCircle} className={`${!servere && 'hidden'} absolute left-4 fas fa-1x text-red-500`}></FontAwesomeIcon>
@@ -140,7 +140,7 @@ export default function VehicleSupportForm() {
                     className="appearance-none forced-colors:appearance-auto"
                     type="radio"
                     name="themes"
-                    onChange={(e) => setServere(false)}
+                    onChange={() => setServere(false)}
                   />
                   <FontAwesomeIcon icon={faWrench} className="fas fa-1x text-red-500"></FontAwesomeIcon>
                   <FontAwesomeIcon icon={faCheckCircle} className={`${servere && 'hidden'} absolute left-4 fas fa-1x text-red-500`}></FontAwesomeIcon>
