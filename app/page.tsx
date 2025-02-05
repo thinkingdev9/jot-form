@@ -20,7 +20,7 @@ export default function VehicleSupportForm() {
     location: "Afrikalaan 17-a, 5232BD's Hertogenbosch",
   })
 
-  const [servere, setServere] = useState<Boolean>(true);
+  const [servere, setServere] = useState<boolean>(true);
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
