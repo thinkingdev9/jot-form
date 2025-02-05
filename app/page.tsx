@@ -5,7 +5,7 @@ import Image from "next/image"
 import { Upload } from 'lucide-react'
 import { VehicleDetails } from "@/types/vehicle"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWrench, faBicycle } from "@fortawesome/free-solid-svg-icons";
+import { faWrench, faBicycle, faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import Bicycle from "@/components/bicycle"
 
 export default function VehicleSupportForm() {
@@ -19,6 +19,8 @@ export default function VehicleSupportForm() {
     customer: "Deliverybike Den Bosch",
     location: "Afrikalaan 17-a, 5232BD's Hertogenbosch",
   })
+
+  const [servere, setServere] = useState<Boolean>(true);
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
@@ -79,7 +81,7 @@ export default function VehicleSupportForm() {
                 </div>
               </div>
             </div>
-            <button className="px-3 py-1.5 self-center justify-self-end border rounded-md hover:bg-gray-50">
+            <button className="px-2.5 py-1.5 self-center justify-self-end border rounded-md hover:bg-gray-50">
               Change Vehicle
             </button>
           </div>
@@ -95,7 +97,7 @@ export default function VehicleSupportForm() {
                 <input
                   id="name"
                   type="text"
-                  className="w-full px-3 py-2 border rounded-md"
+                  className="w-full px-3 py-2 rounded-md border-none outline-none ring-1 ring-gray-400 transition-all duration-300 hover:ring-orange-400 focus:ring-2 focus:ring-orange-400"
                   placeholder="Enter your name"
                 />
               </div>
@@ -104,7 +106,7 @@ export default function VehicleSupportForm() {
                 <input
                   id="email"
                   type="email"
-                  className="w-full px-3 py-2 border rounded-md"
+                  className="w-full px-3 py-2 rounded-md border-none outline-none ring-1 ring-gray-400 transition-all duration-300 hover:ring-orange-400 focus:ring-2 focus:ring-orange-400"
                   placeholder="Enter your email"
                 />
               </div>
@@ -118,13 +120,31 @@ export default function VehicleSupportForm() {
             <label className="text-base font-medium">How servere is the image?</label>
             <div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
-                <label className="flex flex-col items-center p-4 border rounded-lg cursor-pointer hover:bg-gray-50 active:border-red-500">
-                  <FontAwesomeIcon icon={faBicycle} className="fas fa-check text-red-500"></FontAwesomeIcon>
-                  <span className="mt-2 font-light">Ruleable</span>
+                <label
+                  className="relative flex flex-col items-center p-5 border-none ring-1 ring-gray-400 rounded-lg cursor-pointer transition-all duration-300 hover:ring-orange-400 [&:has(input:checked)]:ring-4 [&:has(input:checked)]:ring-orange-500"
+                >
+                  <input
+                    className="appearance-none forced-colors:appearance-auto"
+                    type="radio"
+                    name="themes"
+                    onChange={(e) => setServere(true)}
+                  />
+                  <FontAwesomeIcon icon={faBicycle} className="fas fa-1x text-red-500"></FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faCheckCircle} className={`${!servere && 'hidden'} absolute left-4 fas fa-1x text-red-500`}></FontAwesomeIcon>
+                  <span className="mt-3 text-sm font-light">Ruleable</span>
                 </label>
-                <label className="flex flex-col items-center p-4 border rounded-lg cursor-pointer hover:bg-gray-50">
-                  <FontAwesomeIcon icon={faWrench} className="fas fa-check text-red-500"></FontAwesomeIcon>
-                  <span className="mt-2 font-light">Out of Service</span>
+                <label
+                  className="relative flex flex-col items-center p-5 border-none ring-1 ring-gray-400 rounded-lg cursor-pointer transition-all duration-300 hover:ring-orange-400 [&:has(input:checked)]:ring-4 [&:has(input:checked)]:ring-orange-500"
+                >
+                  <input
+                    className="appearance-none forced-colors:appearance-auto"
+                    type="radio"
+                    name="themes"
+                    onChange={(e) => setServere(false)}
+                  />
+                  <FontAwesomeIcon icon={faWrench} className="fas fa-1x text-red-500"></FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faCheckCircle} className={`${servere && 'hidden'} absolute left-4 fas fa-1x text-red-500`}></FontAwesomeIcon>
+                  <span className="mt-3 text-sm font-light">Out of Service</span>
                 </label>
               </div>
             </div>
@@ -139,7 +159,7 @@ export default function VehicleSupportForm() {
               <input
                 id="customer"
                 type="text"
-                className="w-full px-3 py-2 border rounded-md outline-none ring-0 transition-all duration-300 hover:border-orange-400 focus:border-2 focus:border-orange-400"
+                className="w-full px-3 py-2 rounded-md border-none outline-none ring-1 ring-gray-400 transition-all duration-300 hover:ring-orange-400 focus:ring-2 focus:ring-orange-400"
                 placeholder="Customer"
               />
             </div>
@@ -148,7 +168,7 @@ export default function VehicleSupportForm() {
               <label htmlFor="description" className="text-base font-medium">Description</label>
               <textarea
                 id="description"
-                className="w-full px-3 py-2 border rounded-md min-h-[120px]"
+                className="w-full min-h-[120px] px-3 py-2 rounded-md border-none outline-none ring-1 ring-gray-400 transition-all duration-300 hover:ring-orange-400 focus:ring-2 focus:ring-orange-400"
                 placeholder="Description of issue or action"
               ></textarea>
             </div>
@@ -158,7 +178,7 @@ export default function VehicleSupportForm() {
               <input
                 id="location"
                 type="text"
-                className="w-full px-3 py-2 border rounded-md"
+                className="w-full px-3 py-2 rounded-md border-none outline-none ring-1 ring-gray-400 transition-all duration-300 hover:ring-orange-400 focus:ring-2 focus:ring-orange-400"
                 placeholder="Enter current location"
               />
             </div>
@@ -188,7 +208,7 @@ export default function VehicleSupportForm() {
         >
           Submit
         </button>
-      </div>
-    </div>
+      </div >
+    </div >
   )
 }

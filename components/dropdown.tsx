@@ -1,6 +1,26 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 const Dropdown = () => {
+  return (
+    <select className="appearance-none border-none outline-none bg-transparent text-blue-500">
+      <option className="hidden text-center" value="o">o</option>
+      <option className="text-center" value="A">A</option>
+      <option className="text-center" value="B">B</option>
+      <option className="text-center" value="C">C</option>
+    </select>
+  );
+}
+
+export default Dropdown;
+/* 
+<select className="appearance-none border-none outline-none bg-transparent text-blue-500">
+  <option className="text-center" value="o">o</option>
+  <option className="text-center" value="A">A</option>
+  <option className="text-center" value="B">B</option>
+  <option className="text-center" value="C">C</option>
+</select>
+*/
+/*
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -19,7 +39,7 @@ const Dropdown = () => {
 
       {isOpen && (
         <div
-          className="absolute right-0 z-10 mt-2 w-5 origin-top-right rounded-md bg-blue-500 text-white ring-1 shadow-lg ring-black/5 focus:outline-hidden transition ease-out duration-100"
+          className="absolute right-0 z-50 mt-2 w-5 origin-top-right rounded-md bg-blue-500 text-white ring-1 shadow-lg ring-black/5 focus:outline-hidden transition ease-out duration-100"
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="menu-button"
@@ -34,6 +54,4 @@ const Dropdown = () => {
       )}
     </div>
   );
-}
-
-export default Dropdown;
+*/
