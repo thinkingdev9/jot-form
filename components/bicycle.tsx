@@ -8,7 +8,7 @@ const Bicycle = () => {
       <foreignObject x="250" y="30" width="30" height="150" name="14">
         <Dropdown />
       </foreignObject>
-      <foreignObject x="330" y="70" width="30" height="150" name="12">
+      <foreignObject x="330" y="60" width="30" height="150" name="12">
         <Dropdown />
       </foreignObject>
       <foreignObject x="270" y="130" width="30" height="150" name="17">
@@ -23,7 +23,7 @@ const Bicycle = () => {
       <foreignObject x="295" y="195" width="30" height="150" name="1">
         <Dropdown />
       </foreignObject>
-      <foreignObject x="295" y="260" width="30" height="150" name="6">
+      <foreignObject x="295" y="255" width="30" height="150" name="6">
         <Dropdown />
       </foreignObject>
       <foreignObject x="220" y="130" width="30" height="150" name="5">
@@ -65,7 +65,7 @@ const Bicycle = () => {
       <foreignObject x="110" y="240" width="30" height="150" name="13">
         <Dropdown />
       </foreignObject>
-      <foreignObject x="65" y="260" width="30" height="150" name="11">
+      <foreignObject x="65" y="255" width="30" height="150" name="11">
         <Dropdown />
       </foreignObject>
     </svg>
