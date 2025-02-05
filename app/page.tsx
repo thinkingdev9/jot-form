@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useRef, useState } from "react"
 import Image from "next/image"
 import { Upload } from 'lucide-react'
 import { VehicleDetails } from "@/types/vehicle"
@@ -19,8 +19,8 @@ export default function VehicleSupportForm() {
     customer: "Deliverybike Den Bosch",
     location: "Afrikalaan 17-a, 5232BD's Hertogenbosch",
   })
-
   const [servere, setServere] = useState<number>(0);
+  const fileUpload = useRef<HTMLInputElement>(null);
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
@@ -161,7 +161,7 @@ export default function VehicleSupportForm() {
             </div>
 
             <div className="space-y-6">
-              <label htmlFor="Did the bike have an accident?" className="text-base font-medium">Did the bike have an accident?</label>
+              <label htmlFor="customer" className="text-base font-medium">Did the bike have an accident?</label>
               <input
                 id="customer"
                 type="text"
@@ -189,7 +189,9 @@ export default function VehicleSupportForm() {
               />
             </div>
 
-            <div className="border-2 border-dashed rounded-lg p-8 text-center space-y-4">
+            <input type="file" className="hidden" ref={fileUpload} />
+
+            <div className="border-2 border-dashed rounded-lg p-8 text-center space-y-4 cursor-pointer" onClick={() => fileUpload.current?.click()}>
               <div className="flex justify-center">
                 <Upload className="h-8 w-8 text-gray-400" />
               </div>
