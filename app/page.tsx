@@ -20,7 +20,7 @@ export default function VehicleSupportForm() {
     location: "Afrikalaan 17-a, 5232BD's Hertogenbosch",
   })
 
-  const [servere, setServere] = useState<boolean>(true);
+  const [servere, setServere] = useState<Number>(0);
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
@@ -127,10 +127,12 @@ export default function VehicleSupportForm() {
                     className="appearance-none forced-colors:appearance-auto"
                     type="radio"
                     name="themes"
-                    onChange={() => setServere(true)}
+                    onChange={() => setServere(1)}
                   />
-                  <FontAwesomeIcon icon={faBicycle} className="fas fa-1x text-red-500"></FontAwesomeIcon>
-                  <FontAwesomeIcon icon={faCheckCircle} className={`${!servere && 'hidden'} absolute left-4 fas fa-1x text-red-500`}></FontAwesomeIcon>
+                  <div className="h-5">
+                    <FontAwesomeIcon icon={faBicycle} className="fas fa-1x text-red-500"></FontAwesomeIcon>
+                  </div>
+                  <FontAwesomeIcon icon={faCheckCircle} className={`${(servere === -1 || servere === 0) && 'hidden'} absolute left-4 fas fa-1x text-red-500`}></FontAwesomeIcon>
                   <span className="mt-3 text-sm font-light">Ruleable</span>
                 </label>
                 <label
@@ -140,10 +142,12 @@ export default function VehicleSupportForm() {
                     className="appearance-none forced-colors:appearance-auto"
                     type="radio"
                     name="themes"
-                    onChange={() => setServere(false)}
+                    onChange={() => setServere(-1)}
                   />
-                  <FontAwesomeIcon icon={faWrench} className="fas fa-1x text-red-500"></FontAwesomeIcon>
-                  <FontAwesomeIcon icon={faCheckCircle} className={`${servere && 'hidden'} absolute left-4 fas fa-1x text-red-500`}></FontAwesomeIcon>
+                  <div className="h-5">
+                    <FontAwesomeIcon icon={faWrench} className="fas fa-1x text-red-500"></FontAwesomeIcon>
+                  </div>
+                  <FontAwesomeIcon icon={faCheckCircle} className={`${(servere === 1 || servere === 0) && 'hidden'} absolute left-4 fas fa-1x text-red-500`}></FontAwesomeIcon>
                   <span className="mt-3 text-sm font-light">Out of Service</span>
                 </label>
               </div>
@@ -151,7 +155,9 @@ export default function VehicleSupportForm() {
 
             <div className="space-y-6">
               <label htmlFor="Select the damaged parts" className="text-base font-medium">Select the damaged parts</label>
-              <Bicycle></Bicycle>
+              <div className="h-[180px] sm:h-[300] transition-transform duration-300">
+                <Bicycle></Bicycle>
+              </div>
             </div>
 
             <div className="space-y-6">

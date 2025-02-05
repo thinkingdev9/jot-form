@@ -3,63 +3,69 @@ import Dropdown from "@/components/dropdown";
 
 const Bicycle = () => {
   return (
-    <svg height="200" width="300" xmlns="http://www.w3.org/2000/svg">
-      <image height="200" width="300" href="/bicycle.png" />
-      <foreignObject x="180" y="15" width="30" height="150">
+    <svg className="scale-[0.6] origin-top-left sm:scale-[1] transition-transform duration-300" width="400" height="300" xmlns="http://www.w3.org/2000/svg" >
+      <image x="0" y="0" width="400" height="300" href="/bicycle.png" />
+      <foreignObject x="250" y="30" width="30" height="150" name="14">
         <Dropdown />
       </foreignObject>
-      <foreignObject x="240" y="30" width="30" height="150">
+      <foreignObject x="330" y="70" width="30" height="150" name="12">
         <Dropdown />
       </foreignObject>
-      <foreignObject x="195" y="80" width="30" height="150">
+      <foreignObject x="270" y="130" width="30" height="150" name="17">
         <Dropdown />
       </foreignObject>
-      <foreignObject x="210" y="90" width="30" height="150">
+      <foreignObject x="290" y="140" width="30" height="150" name="9">
         <Dropdown />
       </foreignObject>
-      <foreignObject x="170" y="100" width="30" height="150">
+      <foreignObject x="235" y="160" width="30" height="150" name="20">
         <Dropdown />
       </foreignObject>
-      <foreignObject x="215" y="125" width="30" height="150">
+      <foreignObject x="295" y="195" width="30" height="150" name="1">
         <Dropdown />
       </foreignObject>
-      <foreignObject x="220" y="175" width="30" height="150">
+      <foreignObject x="295" y="260" width="30" height="150" name="6">
         <Dropdown />
       </foreignObject>
-      <foreignObject x="160" y="80" width="30" height="150">
+      <foreignObject x="220" y="130" width="30" height="150" name="5">
         <Dropdown />
       </foreignObject>
-      <foreignObject x="140" y="100" width="30" height="150">
+      <foreignObject x="200" y="160" width="30" height="150" name="4">
         <Dropdown />
       </foreignObject>
-      <foreignObject x="80" y="40" width="30" height="150">
+      <foreignObject x="110" y="80" width="30" height="150" name="3">
         <Dropdown />
       </foreignObject>
-      <foreignObject x="85" y="60" width="30" height="150">
+      <foreignObject x="125" y="110" width="30" height="150" name="16">
         <Dropdown />
       </foreignObject>
-      <foreignObject x="50" y="90" width="30" height="150">
+      <foreignObject x="75" y="135" width="30" height="150" name="15">
         <Dropdown />
       </foreignObject>
-      <foreignObject x="10" y="90" width="30" height="150">
+      <foreignObject x="120" y="150" width="30" height="150" name="8">
         <Dropdown />
       </foreignObject>
-      <foreignObject x="80" y="90" width="30" height="150">
+      <foreignObject x="15" y="140" width="30" height="150" name="21">
         <Dropdown />
       </foreignObject>
-      <foreignObject x="45" y="130" width="30" height="150">
+      <foreignObject x="60" y="175" width="30" height="150" name="10">
         <Dropdown />
       </foreignObject>
-      <foreignObject x="115" y="140" width="30" height="150">
+      <foreignObject x="65" y="190" width="30" height="150" name="2">
         <Dropdown />
       </foreignObject>
-      <foreignObject x="70" y="145" width="30" height="150">
+      <foreignObject x="100" y="210" width="30" height="150" name="19">
         <Dropdown />
       </foreignObject>
-      <foreignObject x="45" y="170" width="30" height="150">
+      <foreignObject x="160" y="210" width="30" height="150" name="18">
         <Dropdown />
       </foreignObject>
-      <foreignObject x="80" y="160" width="30" height="150">
+      <foreignObject x="125" y="225" width="30" height="150" name="11">
+        <Dropdown />
+      </foreignObject>
+      <foreignObject x="110" y="240" width="30" height="150" name="13">
+        <Dropdown />
+      </foreignObject>
+      <foreignObject x="65" y="260" width="30" height="150" name="11">
         <Dropdown />
       </foreignObject>
     </svg>

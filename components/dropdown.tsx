@@ -1,7 +1,7 @@
 const Dropdown = () => {
   return (
     <select className="appearance-none border-none outline-none bg-transparent text-blue-500">
-      <option className="hidden text-center" value="o">o</option>
+      <option className="hidden text-center" value="o">○</option>
       <option className="text-center" value="A">A</option>
       <option className="text-center" value="B">B</option>
       <option className="text-center" value="C">C</option>
