@@ -3,7 +3,7 @@ import Dropdown from "@/components/dropdown";
 
 const Bicycle = () => {
   return (
-    <svg className="scale-[0.6] origin-top-left sm:scale-[1] transition-transform duration-300" width="400" height="300" xmlns="http://www.w3.org/2000/svg" >
+    <svg className="mx-auto scale-[0.6] origin-top-left sm:scale-[1] transition-transform duration-300" width="400" height="300" xmlns="http://www.w3.org/2000/svg" >
       <image x="0" y="0" width="400" height="300" href="/bicycle.png" />
       <foreignObject x="250" y="30" width="30" height="150" name="14">
         <Dropdown />
