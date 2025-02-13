@@ -1,5 +1,5 @@
 interface propsType {
-  data?: Array<String>;
+  data?: Array<string>;
 }
 
 const Dropdown = (props: propsType) => {
