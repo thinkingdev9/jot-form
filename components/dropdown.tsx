@@ -1,15 +1,34 @@
-const Dropdown = () => {
+interface propsType {
+  data?: Array<String>;
+}
+
+const Dropdown = (props: propsType) => {
+  const data = props.data || ["A", "B", "C"];
+
   return (
-    <select className="appearance-none border-none outline-none bg-transparent text-green-400 cursor-pointer text-2xl">
-      <option className="hidden text-center" value="o">●</option>
-      <option className="text-center" value="A">A</option>
-      <option className="text-center" value="B">B</option>
-      <option className="text-center" value="C">C</option>
+    <select className="appearance-none border-none outline-none bg-transparent text-green-400 cursor-pointer text-xl overflow-auto">
+      <option className="hidden" value="o">●</option>
+      {
+        data.length && data.map((item, index) => <option key={index} className="whitespace-normal" value={index}>{item}</option>)
+      }
     </select>
   );
 }
 
 export default Dropdown;
+/*
+<select className="appearance-none border-none outline-none bg-transparent text-green-400 cursor-pointer text-2xl min-w-[150px]  overflow-auto">
+<option className="hidden text-center" value="o">●</option>
+{
+data.length && data.map((item, index) => <option key={index} className="whitespace-normal" value={index}>{item}</option>)
+}
+</select>
+*/
+/* 
+<option className="text-center" value="A">A</option>
+<option className="text-center" value="B">B</option>
+<option className="text-center" value="C">C</option>
+*/
 /* 
 const Dropdown = () => {
   return (
