@@ -9,7 +9,7 @@ const Dropdown = (props: propsType) => {
     <select className="appearance-none border-none outline-none bg-transparent text-green-400 cursor-pointer text-xl overflow-auto">
       <option className="hidden" value="o">●</option>
       {
-        data.length && data.map((item, index) => <option key={index} className="whitespace-normal" value={index}>{item}</option>)
+        data.length && data.map((item, index) => <option key={index} className="whitespace-normal cursor-pointer" value={index}>{item}</option>)
       }
     </select>
   );
