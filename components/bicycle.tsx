@@ -45,7 +45,7 @@ const Bicycle = () => {
         <Dropdown />
       </foreignObject>
       <foreignObject className="overflow-visible" x="15" y="140" width="30" height="150" name="21">
-        <Dropdown />
+        <Dropdown data={["Flat front tire", "Front wheel wobble", "Front wheel spokes broken"]} />
       </foreignObject>
       <foreignObject className="overflow-visible" x="60" y="175" width="30" height="150" name="10">
         <Dropdown />
