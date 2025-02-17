@@ -4,7 +4,7 @@ import Dropdown from "@/components/dropdown";
 const Bicycle = () => {
   return (
       <svg
-        className="scale-[0.6] origin-center overflow-visible sm:scale-[1] transition-transform duration-300 transform translate-x-2 sm:translate-x-0"
+        className="scale-[0.75] origin-center overflow-visible sm:scale-[1] transition-transform duration-300 transform translate-x-1 sm:translate-x-0"
         width="400"
         height="300"
         xmlns="http://www.w3.org/2000/svg"
