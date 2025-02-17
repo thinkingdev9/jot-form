@@ -3,7 +3,12 @@ import Dropdown from "@/components/dropdown";
 
 const Bicycle = () => {
   return (
-    <svg className="mx-auto scale-[0.6] origin-top-left overflow-visible sm:scale-[1] transition-transform duration-300" width="400" height="300" xmlns="http://www.w3.org/2000/svg" >
+      <svg
+        className="scale-[0.6] origin-center overflow-visible sm:scale-[1] transition-transform duration-300 transform translate-x-2 sm:translate-x-0"
+        width="400"
+        height="300"
+        xmlns="http://www.w3.org/2000/svg"
+      >
       <image x="0" y="0" width="400" height="300" href="/bicycle.png" />
       <foreignObject className="overflow-visible" x="250" y="30" width="30" height="150" name="14">
         <Dropdown data={["Front Brake", "Motor"]} />

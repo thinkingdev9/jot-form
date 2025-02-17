@@ -155,7 +155,7 @@ export default function VehicleSupportForm() {
 
             <div className="space-y-6">
               <label htmlFor="Select the damaged parts" className="text-base font-medium">Select the damaged parts</label>
-              <div className="h-[180px] sm:h-[300px] transition-transform duration-300">
+              <div className="flex justify-center items-center h-[180px] sm:h-[300px] transition-transform duration-300">
                 <Bicycle></Bicycle>
               </div>
             </div>
